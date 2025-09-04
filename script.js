@@ -362,4 +362,229 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.body.classList.add('loaded');
 
 // Initialize any third-party libraries or additional functionality here
+
 console.log('STEYA ENGINEERING website initialized successfully');
+
+
+
+
+/* Add to the end of your existing styles.css file */
+
+/* Services Detailed Section */
+.services-detailed {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-category {
+    margin-bottom: 6rem;
+}
+
+.service-category-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.service-category-header h2 {
+    margin-bottom: 1rem;
+}
+
+.service-category-header h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-detail-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-detail-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 128, 128, 0.1);
+    border-radius: 50%;
+    color: var(--color-teal);
+}
+
+.service-detail-icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+.service-detail-card h3 {
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.service-detail-card ul {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.service-detail-card li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    color: var(--color-gray);
+}
+
+.service-detail-card li::before {
+    content: "•";
+    color: var(--color-teal);
+    font-weight: bold;
+    position: absolute;
+    left: -1rem;
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.process-step {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--color-teal);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.process-step h3 {
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.process-step p {
+    color: var(--color-gray);
+    font-size: 0.95rem;
+}
+
+/* Enhanced service detail cards */
+.service-detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, var(--color-teal), transparent);
+    opacity: 0.1;
+    transition: height 0.5s ease;
+    z-index: 0;
+}
+
+.service-detail-card:hover::before {
+    height: 100%;
+}
+
+.service-detail-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-teal), var(--color-maroon));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.service-detail-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive Design for Services Page */
+@media (max-width: 992px) {
+    .service-details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .process-steps {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .service-detail-card {
+        padding: 2rem;
+    }
+    
+    .process-step {
+        padding: 1.5rem;
+    }
+    
+    .service-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-detailed {
+        padding: 4rem 0;
+    }
+    
+    .service-category {
+        margin-bottom: 4rem;
+    }
+    
+    .service-detail-card {
+        padding: 1.5rem;
+    }
+    
+    .process-step {
+        padding: 1.2rem;
+    }
+}
