@@ -219,6 +219,58 @@
             background-size: 40px 40px;
         }
         
+        /* Photo spaces */
+        .service-photo-space {
+            width: 100%;
+            height: 250px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-photo-space.large {
+            height: 400px;
+        }
+        
+        .service-photo-space.medium {
+            height: 300px;
+        }
+        
+        .service-photo-space::before {
+            content: "Photo Space";
+            color: #999;
+            font-style: italic;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .photo-grid-item {
+            height: 200px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .photo-grid-item::before {
+            content: "Photo Space";
+            color: #999;
+            font-style: italic;
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 992px) {
             .service-details-grid {
@@ -227,6 +279,10 @@
             
             .services-hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .photo-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -254,6 +310,14 @@
             .services-hero h1 {
                 font-size: 2.2rem;
             }
+            
+            .service-photo-space.large {
+                height: 300px;
+            }
+            
+            .service-photo-space.medium {
+                height: 250px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -271,6 +335,18 @@
             
             .services-hero p {
                 font-size: 1rem;
+            }
+            
+            .service-photo-space {
+                height: 200px;
+            }
+            
+            .service-photo-space.large {
+                height: 250px;
+            }
+            
+            .service-photo-space.medium {
+                height: 200px;
             }
         }
     </style>
@@ -337,6 +413,10 @@
                     <h2>Construction Services</h2>
                     <p>Building the future with precision and quality craftsmanship</p>
                 </div>
+                
+                <!-- Photo space for construction services -->
+                <div class="service-photo-space large"></div>
+                
                 <div class="service-details-grid">
                     <div class="service-detail-card">
                         <div class="service-detail-icon">
@@ -372,6 +452,12 @@
                             <li>Road drainage systems</li>
                             <li>Road maintenance and repairs</li>
                         </ul>
+                    </div>
+                    
+                    <!-- Photo grid for construction examples -->
+                    <div class="photo-grid">
+                        <div class="photo-grid-item"></div>
+                        <div class="photo-grid-item"></div>
                     </div>
                     
                     <div class="service-detail-card">
@@ -419,6 +505,10 @@
                     <h2>Engineering Design & Planning</h2>
                     <p>Innovative design solutions for complex engineering challenges</p>
                 </div>
+                
+                <!-- Photo space for design services -->
+                <div class="service-photo-space medium"></div>
+                
                 <div class="service-details-grid">
                     <div class="service-detail-card">
                         <div class="service-detail-icon">
@@ -435,6 +525,9 @@
                             <li>3D modeling and BIM services</li>
                         </ul>
                     </div>
+                    
+                    <!-- Photo space for design examples -->
+                    <div class="service-photo-space"></div>
                     
                     <div class="service-detail-card">
                         <div class="service-detail-icon">
@@ -478,6 +571,10 @@
                     <h2>Specialized Services</h2>
                     <p>Expert solutions for specific engineering challenges</p>
                 </div>
+                
+                <!-- Photo space for specialized services -->
+                <div class="service-photo-space large"></div>
+                
                 <div class="service-details-grid">
                     <div class="service-detail-card">
                         <div class="service-detail-icon">
@@ -493,6 +590,12 @@
                             <li>Borehole drilling and installation</li>
                             <li>Water treatment systems</li>
                         </ul>
+                    </div>
+                    
+                    <!-- Photo grid for specialized services examples -->
+                    <div class="photo-grid">
+                        <div class="photo-grid-item"></div>
+                        <div class="photo-grid-item"></div>
                     </div>
                     
                     <div class="service-detail-card">
@@ -538,6 +641,10 @@
                     <h2>Surveying Services</h2>
                     <p>Precise measurement and mapping services for engineering projects</p>
                 </div>
+                
+                <!-- Photo space for surveying services -->
+                <div class="service-photo-space medium"></div>
+                
                 <div class="service-details-grid">
                     <div class="service-detail-card">
                         <div class="service-detail-icon">
@@ -555,6 +662,9 @@
                             <li>Volumetric calculations</li>
                         </ul>
                     </div>
+                    
+                    <!-- Photo space for surveying equipment -->
+                    <div class="service-photo-space"></div>
                     
                     <div class="service-detail-card">
                         <div class="service-detail-icon">
@@ -585,6 +695,10 @@
                 <h2>Our Process</h2>
                 <p>A systematic approach to delivering exceptional engineering solutions</p>
             </div>
+            
+            <!-- Photo space for process visualization -->
+            <div class="service-photo-space large" style="margin-bottom: 3rem;"></div>
+            
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
@@ -641,8 +755,8 @@
                     <div class="social-links">
                         <a href="#" aria-label="LinkedIn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 8a6 6 极 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7极-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap极="round" stroke-linejoin="round"/>
                                 <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
@@ -652,7 +766,7 @@
                             </svg>
                         </a>
                         <a href="#" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="20" height="20" viewBox="0极 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
@@ -670,7 +784,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
+                       极<li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
