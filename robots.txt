@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /css/
+
+Sitemap: https://Alvinategyeka.github.io/STEYA-ENGINEERING/sitemap.xml
+
+# Host
+Host: https://Alvinategyeka.github.io/STEYA-ENGINEERING
