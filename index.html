@@ -1,230 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEYA ENGINEERING LTD | Engineering Excellence</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>STEYA ENGINEERING LTD | Precision Engineering Solutions</title>
+    <meta name="description" content="STEYA ENGINEERING delivers exceptional construction, structural, mechanical, and electrical engineering solutions across Uganda. Building tomorrow's infrastructure today." />
+    <meta name="keywords" content="Engineering, Construction, Structural Engineering, Mechanical Engineering, Electrical Engineering, Uganda, Kampala, Building" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.steyaengineering.com/" />
+
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="assets/logo.jpg" />
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.steyaengineering.com/" />
+    <meta property="og:title" content="STEYA ENGINEERING LTD | Precision Engineering Solutions" />
+    <meta property="og:description" content="Building a better future through engineering. Expert construction, design, and specialized engineering services in Uganda." />
+    <meta property="og:image" content="https://www.steyaengineering.com/assets/placeholder-1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="STEYA ENGINEERING LTD | Precision Engineering" />
+    <meta name="twitter:description" content="Expert engineering and construction solutions across Uganda." />
+    <meta name="twitter:image" content="https://www.steyaengineering.com/assets/placeholder-1.png" />
+
+    <!-- JSON-LD Structured Data (SEO Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "STEYA ENGINEERING LTD",
+      "description": "Precision engineering and construction solutions in Uganda.",
+      "url": "https://www.steyaengineering.com/",
+      "logo": "https://www.steyaengineering.com/assets/logo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kawempe",
+        "addressLocality": "Kampala",
+        "addressCountry": "UG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+256755449196",
+        "contactType": "Sales",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/steya-engineering",
+        "https://twitter.com/steyaengineering"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "STEYA ENGINEERING LTD",
+      "url": "https://www.steyaengineering.com/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Engineering & Construction",
+      "provider": {
+        "@type": "Organization",
+        "name": "STEYA ENGINEERING LTD"
+      },
+      "areaServed": "Uganda",
+      "description": "Comprehensive engineering design, structural, mechanical, electrical, and specialized construction services."
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Custom cursor -->
+    <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
-    
-    <!-- Animated background elements -->
-    <div class="bg-elements">
-        <div class="bg-circle-1"></div>
-        <div class="bg-circle-2"></div>
-        <div class="bg-rectangle"></div>
-    </div>
-    
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <!-- Logo space - add your logo image here -->
-                <div class="logo-container">
-                    <img src="assets/logo.jpg" alt="STEYA ENGINEERING Logo" class="logo-img">
-                </div>
-                STEYA<span>ENGINEERING</span>
+                <img src="assets/logo.jpg" alt="STEYA ENGINEERING LTD" class="logo-img" />
+                <span class="logo-text">STEYA</span>
+                <span class="logo-suffix">ENGINEERING</span>
             </a>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="sectors.html" class="nav-link">Sectors</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="product.html" class="nav-link">Product</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#vision">Vision & Mission</a></li>
+                        <li><a href="about.html#values">Our Values</a></li>
+                        <li><a href="about.html#team">Leadership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html#construction">Construction</a></li>
+                        <li><a href="services.html#design">Engineering Design</a></li>
+                        <li><a href="services.html#specialized">Specialized Services</a></li>
+                        <li><a href="services.html#structural">Structural</a></li>
+                        <li><a href="services.html#mechanical">Mechanical</a></li>
+                        <li><a href="services.html#electrical">Electrical</a></li>
+                    </ul>
+                </li>
+                <li><a href="sectors.html" class="nav-link">Sectors</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Insights</a></li>
+                <li><a href="product.html" class="nav-link">Products</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section with enhanced graphics -->
-    <section class="hero">
-        <div class="particles-container" id="particles-container"></div>
-        <div class="animated-bg-shapes">
-            <div class="animated-shape shape-1"></div>
-            <div class="animated-shape shape-2"></div>
-            <div class="animated-shape shape-3"></div>
-            <div class="animated-shape shape-4"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-media">
+            <video playsinline autoplay muted loop id="hero-video">
+                <source src="assets/hero-video.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-overlay"></div>
         </div>
-        <div class="video-overlay"></div>
-        <video playsinline autoplay muted loop id="hero-video">
-            <source src="assets/hero-video.mp4" type="video/mp4">
-        </video>
+        <div class="hero-graphics">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-lines"></div>
+        </div>
         <div class="hero-content">
-            <h1 class="hero-title" data-text="Building a better future through engineering">Building a better future through engineering</h1>
+            <span class="hero-badge">Since 2022</span>
+            <h1 class="hero-title">
+                <span class="title-line">Building a better</span>
+                <span class="title-line accent">future through</span>
+                <span class="title-line">engineering</span>
+            </h1>
             <p class="hero-subtitle">Precision engineering solutions for a changing world</p>
-            <a href="contact.html" class="cta-button magnetic glow-effect">
-                <span>Start a Project</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.5 6H20.5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M20 6L7 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </a>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <p>Scroll to explore</p>
-        </div>
-    </section>
-
-    <!-- Intro Section with enhanced graphics -->
-<section class="intro-section">
-    <div class="animated-bg-shapes">
-        <div class="animated-shape shape-1"></div>
-        <div class="animated-shape shape-2"></div>
-    </div>
-    <div class="container">
-        <div class="intro-grid">
-            <div class="intro-text">
-                <h2 class="reveal-text">Building Tomorrow's Infrastructure Today</h2>
-                <p>STEYA ENGINEERING LTD delivers exceptional engineering solutions with precision, innovation, and unwavering commitment to excellence. Established in 2022, we're an innovative, sustainable and standards-based firm providing comprehensive engineering and construction services across Uganda with a vision to expand throughout Africa.</p>
-                <p>Our multidisciplinary approach ensures comprehensive project delivery from concept to completion, focusing on reliability, safety, time efficiency and cost-effectiveness.</p>
-                <a href="about.html" class="text-link magnetic">
-                    <span>Learn more about us</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="hero-actions">
+                <a href="contact.html" class="cta-button magnetic glow-effect">
+                    <span>Start a Project</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.5 6H20.5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         <path d="M20 6L7 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </a>
+                <a href="#intro" class="hero-secondary-btn">
+                    <span class="btn-circle">▼</span>
+                    <span>Explore</span>
+                </a>
             </div>
-            <div class="intro-image">
-                <div class="image-frame">
-                    <img src="assets/placeholder-1.png" alt="Modern engineering project" loading="lazy">
-                    <div class="image-overlay">
-                        <div class="overlay-content">
-                            <h3>Engineering Excellence</h3>
-                            <p>Since 2022</p>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About / Intro Section -->
+    <section class="about-section" id="intro">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-tag">About Us</span>
+                    <h2>Building Tomorrow's<br />Infrastructure Today</h2>
+                    <div class="about-content">
+                        <p class="lead">STEYA ENGINEERING LTD delivers exceptional engineering solutions with precision, innovation, and unwavering commitment to excellence.</p>
+                        <p>Established in 2022, we're an innovative, sustainable and standards-based firm providing comprehensive engineering and construction services across Uganda with a vision to expand throughout Africa.</p>
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="2022">0</span>
+                                <span class="stat-label">Founded</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="50">0</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="100" data-suffix="%">0</span>
+                                <span class="stat-label">Client Satisfaction</span>
+                            </div>
                         </div>
+                        <a href="about.html" class="text-link magnetic">
+                            <span>Learn more about us</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5 6H20.5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20 6L7 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="assets/placeholder-1.png" alt="Modern engineering project" loading="lazy" />
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Engineering Excellence</h3>
+                                <p>Since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-box deco-1"></div>
+                    <div class="deco-box deco-2"></div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Services-preview section  -->
-<section class="services-preview">
-    <div class="animated-bg-shapes">
-        <div class="animated-shape shape-3"></div>
-        <div class="animated-shape shape-4"></div>
-    </div>
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Services</h2>
-            <p>Comprehensive engineering and construction solutions across multiple disciplines</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card glow-effect">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                        <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
-                        <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
-                        <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                    </svg>
-                </div>
-                <h3>Construction</h3>
-                <p>Building construction, road works, steel structures, and comprehensive civil engineering works with focus on quality and durability.</p>
-                <a href="services.html#construction" class="text-link">Explore service</a>
-            </div>
-            <div class="service-card glow-effect">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="16 12 12 8 8 12"></polyline>
-                        <line x1="12" y1="2" x2="12" y2="22"></line>
-                    </svg>
-                </div>
-                <h3>Engineering Design</h3>
-                <p>Innovative engineering design and planning, quantity estimates, surveying, and project supervision services.</p>
-                <a href="services.html#design" class="text-link">Explore service</a>
-            </div>
-            <div class="service-card glow-effect">
-                <div class="service-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                    </svg>
-                </div>
-                <h3>Specialized Services</h3>
-                <p>Water supply, irrigation, material supply and production, project management, and specialized infrastructure solutions.</p>
-                <a href="services.html#specialized" class="text-link">Explore service</a>
-            </div>
-        </div>
-        <div class="centered">
-            <a href="services.html" class="outline-button magnetic">
-                <span>View all services</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-    <!-- Featured Services -->
-    <section class="services-preview">
-        <div class="animated-bg-shapes">
-            <div class="animated-shape shape-3"></div>
-            <div class="animated-shape shape-4"></div>
-        </div>
+    <!-- Services Section -->
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
+                <span class="section-tag">What We Do</span>
                 <h2>Our Services</h2>
-                <p>Comprehensive engineering solutions across multiple disciplines</p>
+                <p>Comprehensive engineering and construction solutions across multiple disciplines</p>
             </div>
             <div class="services-grid">
-                <div class="service-card glow-effect">
+                <!-- Construction -->
+                <div class="service-card glow-effect" data-service="construction">
                     <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
-                            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
-                            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Construction</h3>
+                    <p>Building construction, road works, steel structures, and comprehensive civil engineering works with focus on quality and durability.</p>
+                    <ul class="service-features">
+                        <li>Building Construction</li>
+                        <li>Road Works</li>
+                        <li>Steel Structures</li>
+                    </ul>
+                    <a href="services.html#construction" class="service-link">Explore →</a>
+                </div>
+                <!-- Engineering Design -->
+                <div class="service-card glow-effect" data-service="design">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="16 12 12 8 8 12"/>
+                            <line x1="12" y1="2" x2="12" y2="22"/>
+                        </svg>
+                    </div>
+                    <h3>Engineering Design</h3>
+                    <p>Innovative engineering design and planning, quantity estimates, surveying, and project supervision services.</p>
+                    <ul class="service-features">
+                        <li>Design & Planning</li>
+                        <li>Quantity Estimates</li>
+                        <li>Project Supervision</li>
+                    </ul>
+                    <a href="services.html#design" class="service-link">Explore →</a>
+                </div>
+                <!-- Specialized Services -->
+                <div class="service-card glow-effect" data-service="specialized">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3>Specialized Services</h3>
+                    <p>Water supply, irrigation, material supply and production, project management, and specialized infrastructure solutions.</p>
+                    <ul class="service-features">
+                        <li>Water Supply</li>
+                        <li>Irrigation</li>
+                        <li>Project Management</li>
+                    </ul>
+                    <a href="services.html#specialized" class="service-link">Explore →</a>
+                </div>
+                <!-- Structural Engineering -->
+                <div class="service-card glow-effect" data-service="structural">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                         </svg>
                     </div>
                     <h3>Structural Engineering</h3>
                     <p>Design and analysis of buildings, bridges, and other structures with a focus on safety, durability, and efficiency.</p>
-                    <a href="services.html#structural" class="text-link">Explore service</a>
+                    <ul class="service-features">
+                        <li>Building Design</li>
+                        <li>Bridge Engineering</li>
+                        <li>Structural Analysis</li>
+                    </ul>
+                    <a href="services.html#structural" class="service-link">Explore →</a>
                 </div>
-                <div class="service-card glow-effect">
+                <!-- Mechanical Engineering -->
+                <div class="service-card glow-effect" data-service="mechanical">
                     <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="16 12 12 8 8 12"></polyline>
-                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                         </svg>
                     </div>
                     <h3>Mechanical Engineering</h3>
                     <p>Innovative mechanical systems design, HVAC solutions, and energy-efficient mechanical installations.</p>
-                    <a href="services.html#mechanical" class="text-link">Explore service</a>
+                    <ul class="service-features">
+                        <li>HVAC Systems</li>
+                        <li>Mechanical Design</li>
+                        <li>Energy Solutions</li>
+                    </ul>
+                    <a href="services.html#mechanical" class="service-link">Explore →</a>
                 </div>
-                <div class="service-card glow-effect">
+                <!-- Electrical Engineering -->
+                <div class="service-card glow-effect" data-service="electrical">
                     <div class="service-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            <polyline points="12 2 12 8 16 8 8 22 8 16 4 16 12 2"/>
                         </svg>
                     </div>
                     <h3>Electrical Engineering</h3>
                     <p>Comprehensive electrical systems design, power distribution, lighting, and renewable energy integration.</p>
-                    <a href="services.html#electrical" class="text-link">Explore service</a>
+                    <ul class="service-features">
+                        <li>Power Distribution</li>
+                        <li>Lighting Design</li>
+                        <li>Renewable Energy</li>
+                    </ul>
+                    <a href="services.html#electrical" class="service-link">Explore →</a>
                 </div>
             </div>
             <div class="centered">
@@ -238,42 +353,53 @@
         </div>
     </section>
 
-    <!-- Projects Preview -->
-    <section class="projects-preview">
-        <div class="animated-bg-shapes">
-            <div class="animated-shape shape-1"></div>
-            <div class="animated-shape shape-2"></div>
-        </div>
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
         <div class="container">
             <div class="section-header">
+                <span class="section-tag">Our Work</span>
                 <h2>Featured Projects</h2>
                 <p>Showcasing our engineering excellence and innovative solutions</p>
             </div>
+            <!-- Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+            </div>
+            <!-- Projects Grid -->
             <div class="projects-grid">
-                <div class="project-item glow-effect">
+                <div class="project-item" data-category="residential">
                     <div class="project-image">
-                        <img src="assets/project-1.png" alt="Residential House" loading="lazy">
+                        <img src="assets/project-1.png" alt="Residential House" loading="lazy" />
                         <div class="project-overlay">
-                            <h3>Residential House Acryt Ndejje Entebbe Road</h3>
-                            <p>Levelling the ground for basement floor and ground floor level</p>
+                            <span class="project-tag">Residential</span>
+                            <h3>Residential House</h3>
+                            <p>Acryt Ndejje Entebbe Road — Levelling the ground for basement floor and ground floor level</p>
+                            <a href="#" class="project-link">View Project →</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item glow-effect">
+                <div class="project-item" data-category="commercial">
                     <div class="project-image">
-                        <img src="assets/project-2.png" alt="Construction Project" loading="lazy">
+                        <img src="assets/project-2.png" alt="Namanve Warehouse" loading="lazy" />
                         <div class="project-overlay">
-                            <h3>Namanve Ware House</h3>
+                            <span class="project-tag">Commercial</span>
+                            <h3>Namanve Warehouse</h3>
                             <p>Construction Project</p>
+                            <a href="#" class="project-link">View Project →</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-item glow-effect">
+                <div class="project-item" data-category="infrastructure">
                     <div class="project-image">
-                        <img src="assets/project-3.png" alt="Road Survey Works at Kyadondo" loading="lazy">
+                        <img src="assets/project-3.png" alt="Road Survey" loading="lazy" />
                         <div class="project-overlay">
-                            <h3>Road Survey works at Kyadondo</h3>
-                            <p>Road Survey</p>
+                            <span class="project-tag">Infrastructure</span>
+                            <h3>Road Survey Works</h3>
+                            <p>Road Survey at Kyadondo</p>
+                            <a href="#" class="project-link">View Project →</a>
                         </div>
                     </div>
                 </div>
@@ -291,103 +417,98 @@
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="animated-bg-shapes">
-            <div class="animated-shape shape-3"></div>
-            <div class="animated-shape shape-4"></div>
-        </div>
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Engineer Your Vision?</h2>
-                <p>Let's collaborate to bring your project to life with innovative engineering solutions and exceptional service.</p>
-                <a href="contact.html" class="cta-button magnetic glow-effect">
-                    <span>Get in touch</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
+                <div class="cta-text">
+                    <span class="section-tag light">Let's Build Together</span>
+                    <h2>Ready to Engineer<br />Your Vision?</h2>
+                    <p>Let's collaborate to bring your project to life with innovative engineering solutions and exceptional service.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="cta-button magnetic glow-effect">
+                            <span>Get in touch</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+256755449196" class="cta-phone">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>+256 755 449 196</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-visual">
+                    <div class="cta-shape cta-shape-1"></div>
+                    <div class="cta-shape cta-shape-2"></div>
+                    <div class="cta-shape cta-shape-3"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-    <div class="animated-bg-shapes">
-        <div class="animated-shape shape-1"></div>
-        <div class="animated-shape shape-2"></div>
-    </div>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>STEYA<span>ENGINEERING</span></h3>
-                <p>Delivering precision engineering solutions with innovation, expertise, and commitment to excellence since 2022.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.jpg" alt="STEYA ENGINEERING" class="footer-logo-img" />
+                        <span>STEYA<span>ENGINEERING</span></span>
                     </a>
-                    <a href="#" aria-label="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+                    <p>Delivering precision engineering solutions with innovation, expertise, and commitment to excellence since 2022.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#construction">Construction</a></li>
+                        <li><a href="services.html#design">Engineering Design</a></li>
+                        <li><a href="services.html#specialized">Specialized Services</a></li>
+                        <li><a href="services.html#structural">Structural</a></li>
+                        <li><a href="services.html#mechanical">Mechanical</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <address>
+                        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kawempe, Kampala, Uganda</p>
+                        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+256755449196">+256 755 449 196</a></p>
+                        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <a href="mailto:steyaconstruction@gmail.com">steyaconstruction@gmail.com</a></p>
+                    </address>
+                    <div class="accreditation-badges">
+                        <span>URA</span>
+                        <span>KCCA</span>
+                        <span>URSB</span>
+                        <span>NSSF</span>
+                    </div>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html#construction">Construction</a></li>
-                    <li><a href="services.html#design">Engineering Design</a></li>
-                    <li><a href="services.html#specialized">Specialized Services</a></li>
-                    <li><a href="services.html#surveying">Surveying</a></li>
-                    <li><a href="services.html">View All Services</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p>Kawempe<br>Kampala<br>Uganda</p>
-                <p>Phone: +256 755 449 196<br>Email: steyaconstruction@gmail.com</p>
-                <p>Registered with URA, KCCA, URSB, NSSF</p>
-                <a href="contact.html" class="outline-button">Get Directions</a>
+            <div class="footer-bottom">
+                <p>&copy; 2022 STEYA ENGINEERING LTD. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2022 STEYA ENGINEERING LTD. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
