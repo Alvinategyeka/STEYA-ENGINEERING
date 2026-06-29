@@ -1,400 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
     <title>Our Services | STEYA ENGINEERING LTD</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="STEYA ENGINEERING LTD offers comprehensive construction, engineering design, structural, mechanical, electrical, and specialized services across Uganda." />
+    <meta name="keywords" content="Engineering Services, Construction Uganda, Structural Engineering, Mechanical Engineering, Electrical Engineering" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.steyaengineering.com/services.html" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="assets/logo.jpg" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.steyaengineering.com/services.html" />
+    <meta property="og:title" content="Our Services | STEYA ENGINEERING LTD" />
+    <meta property="og:description" content="Comprehensive engineering and construction solutions across multiple disciplines – Construction, Design, Structural, Mechanical, Electrical, and Specialized Services." />
+    <meta property="og:image" content="https://www.steyaengineering.com/assets/placeholder-1.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Services | STEYA ENGINEERING LTD" />
+    <meta name="twitter:description" content="Comprehensive engineering and construction solutions across multiple disciplines." />
+    <meta name="twitter:image" content="https://www.steyaengineering.com/assets/placeholder-1.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
     <style>
-        /* Simplified background elements */
-        .simplified-bg-element {
-            position: absolute;
-            z-index: 0;
-            opacity: 0.03;
-            pointer-events: none;
+        /* Service detail page specific styles */
+        .service-detail-hero {
+            min-height: 60vh;
         }
-        
-        .bg-corner-1 {
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 300px;
-            border-left: 80px solid transparent;
-            border-bottom: 80px solid transparent;
-            border-top: 80px solid var(--color-teal);
-            border-right: 80px solid var(--color-teal);
+        .service-detail-hero .hero-title {
+            font-size: 3.5rem;
         }
-        
-        .bg-corner-2 {
-            bottom: 0;
-            left: 0;
-            width: 200px;
-            height: 200px;
-            border-left: 60px solid var(--color-maroon);
-            border-bottom: 60px solid var(--color-maroon);
-            border-top: 60px solid transparent;
-            border-right: 60px solid transparent;
+        .service-category-section {
+            padding: var(--space-4xl) 0;
         }
-        
-        /* Simplified service cards */
-        .service-category {
-            margin-bottom: 5rem;
-            position: relative;
-            z-index: 2;
+        .service-category-section:nth-child(even) {
+            background: var(--off-white);
         }
-        
         .service-category-header {
             text-align: center;
             margin-bottom: 3rem;
-            position: relative;
         }
-        
         .service-category-header h2 {
-            margin-bottom: 1rem;
-            display: inline-block;
+            font-size: 2.8rem;
         }
-        
-        .service-category-header h2::after {
-            left: 50%;
-            transform: translateX(-50%);
+        .service-category-header p {
+            color: var(--gray-500);
+            max-width: 600px;
+            margin: 0.5rem auto 0;
         }
-        
         .service-details-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
-        
         .service-detail-card {
-            background: var(--color-white);
+            background: var(--white);
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--color-teal);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s ease;
+            border-left: 4px solid var(--primary);
             height: 100%;
         }
-        
         .service-detail-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-            border-left: 4px solid var(--color-maroon);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-left-color: var(--secondary);
         }
-        
-        .service-detail-icon {
+        .service-detail-card .service-icon {
             width: 60px;
             height: 60px;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(0, 128, 128, 0.1);
-            border-radius: 12px;
-            color: var(--color-teal);
+            background: rgba(0,128,128,0.1);
+            border-radius: var(--radius-md);
+            color: var(--primary);
         }
-        
-        .service-detail-icon svg {
-            width: 30px;
-            height: 30px;
+        .service-detail-card .service-icon svg {
+            width: 32px;
+            height: 32px;
         }
-        
         .service-detail-card h3 {
-            margin-bottom: 1rem;
-            color: var(--color-dark);
             font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-serif);
         }
-        
+        .service-detail-card p {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
         .service-detail-card ul {
-            margin-top: 1.2rem;
+            margin-top: 1rem;
             padding-left: 1.2rem;
         }
-        
         .service-detail-card li {
-            margin-bottom: 0.5rem;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
             position: relative;
-            color: var(--color-gray);
-            line-height: 1.5;
+            padding-left: 0.25rem;
         }
-        
         .service-detail-card li::before {
             content: "•";
-            color: var(--color-teal);
+            color: var(--accent);
             font-weight: bold;
-            position: absolute;
-            left: -1rem;
+            margin-right: 0.5rem;
         }
-        
-        /* Process steps */
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
-        
         .process-step {
             text-align: center;
-            padding: 1.5rem;
-            background: var(--color-white);
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
-            position: relative;
         }
-        
         .process-step:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
         }
-        
         .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--color-teal);
-            color: var(--color-white);
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            font-weight: bold;
+            font-size: 1.3rem;
+            font-weight: 700;
             margin: 0 auto 1.2rem;
         }
-        
         .process-step h3 {
-            margin-bottom: 0.8rem;
-            color: var(--color-dark);
-            font-size: 1.2rem;
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
-        
         .process-step p {
-            color: var(--color-gray);
+            color: var(--gray-500);
             font-size: 0.9rem;
             line-height: 1.5;
         }
-        
-        /* Services hero section */
-        .services-hero {
-            position: relative;
-            padding: 8rem 0 5rem;
-            background: linear-gradient(135deg, var(--color-dark) 0%, #2a4b6a 100%);
-            color: var(--color-white);
-            text-align: center;
-            overflow: hidden;
-        }
-        
-        .services-hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
-        .services-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--color-white);
-        }
-        
-        .services-hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        /* Simplified background pattern */
-        .services-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            opacity: 0.03;
-            background-image: radial-gradient(var(--color-white) 1px, transparent 2px);
-            background-size: 40px 40px;
-        }
-        
-        /* Photo spaces */
-        .service-photo-space {
-            width: 100%;
-            height: 250px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            margin: 2rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .service-photo-space.large {
-            height: 400px;
-        }
-        
-        .service-photo-space.medium {
-            height: 300px;
-        }
-        
-        .service-photo-space::before {
-            content: "Photo Space";
-            color: #999;
-            font-style: italic;
-        }
-        
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .photo-grid-item {
-            height: 200px;
-            background-color: #f5f5f5;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .photo-grid-item::before {
-            content: "Photo Space";
-            color: #999;
-            font-style: italic;
-        }
-        
-        /* Responsive adjustments */
         @media (max-width: 992px) {
-            .service-details-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            }
-            
-            .services-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .photo-grid {
-                grid-template-columns: 1fr;
-            }
+            .service-detail-hero .hero-title { font-size: 2.8rem; }
+            .service-category-header h2 { font-size: 2.2rem; }
         }
-        
         @media (max-width: 768px) {
-            .service-detail-card {
-                padding: 1.5rem;
-            }
-            
-            .process-step {
-                padding: 1.2rem;
-            }
-            
-            .service-details-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            .services-hero {
-                padding: 6rem 0 4rem;
-            }
-            
-            .services-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .service-photo-space.large {
-                height: 300px;
-            }
-            
-            .service-photo-space.medium {
-                height: 250px;
-            }
+            .service-details-grid { grid-template-columns: 1fr; }
+            .service-detail-hero .hero-title { font-size: 2.2rem; }
+            .process-steps { grid-template-columns: 1fr 1fr; }
         }
-        
         @media (max-width: 576px) {
-            .service-detail-card {
-                padding: 1.2rem;
-            }
-            
-            .services-hero {
-                padding: 5rem 0 3rem;
-            }
-            
-            .services-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .services-hero p {
-                font-size: 1rem;
-            }
-            
-            .service-photo-space {
-                height: 200px;
-            }
-            
-            .service-photo-space.large {
-                height: 250px;
-            }
-            
-            .service-photo-space.medium {
-                height: 200px;
-            }
+            .process-steps { grid-template-columns: 1fr; }
+            .service-detail-card { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Custom cursor -->
+    <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
-    
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <div class="logo-container">
-                    <img src="assets/logo.jpg" alt="STEYA ENGINEERING Logo" class="logo-img">
-                </div>
-                STEYA<span>ENGINEERING</span>
+                <img src="assets/logo.jpg" alt="STEYA ENGINEERING LTD" class="logo-img" />
+                <span class="logo-text">STEYA</span>
+                <span class="logo-suffix">ENGINEERING</span>
             </a>
-            <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link active">Services</a>
-                <a href="sectors.html" class="nav-link">Sectors</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="product.html" class="nav-link">Product</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="about.html" class="nav-link">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#vision">Vision & Mission</a></li>
+                        <li><a href="about.html#values">Our Values</a></li>
+                        <li><a href="about.html#team">Leadership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services.html#construction">Construction</a></li>
+                        <li><a href="services.html#design">Engineering Design</a></li>
+                        <li><a href="services.html#specialized">Specialized Services</a></li>
+                        <li><a href="services.html#structural">Structural</a></li>
+                        <li><a href="services.html#mechanical">Mechanical</a></li>
+                        <li><a href="services.html#electrical">Electrical</a></li>
+                    </ul>
+                </li>
+                <li><a href="sectors.html" class="nav-link">Sectors</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Insights</a></li>
+                <li><a href="product.html" class="nav-link">Products</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Services Hero Section -->
-    <section class="services-hero">
-        <div class="services-pattern"></div>
-        <div class="simplified-bg-element bg-corner-1"></div>
-        <div class="simplified-bg-element bg-corner-2"></div>
-        
-        <div class="container">
-            <div class="services-hero-content">
-                <h1>Our Services</h1>
-                <p>Comprehensive engineering and construction solutions with precision, innovation, and commitment to excellence. We deliver reliable, safe, and cost-effective projects across multiple disciplines.</p>
-                <a href="contact.html" class="cta-button magnetic">
-                    <span>Start a Project</span>
+    <section class="hero service-detail-hero">
+        <div class="hero-media">
+            <video playsinline autoplay muted loop id="hero-video">
+                <source src="assets/hero-video.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-graphics">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-lines"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">What We Do</span>
+            <h1 class="hero-title">
+                <span class="title-line">Our</span>
+                <span class="title-line accent">Services</span>
+            </h1>
+            <p class="hero-subtitle">Comprehensive engineering and construction solutions with precision, innovation, and commitment to excellence.</p>
+            <div class="hero-actions">
+                <a href="#construction" class="cta-button magnetic glow-effect">
+                    <span>Explore Services</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.5 6H20.5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         <path d="M20 6L7 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -402,328 +259,438 @@
                 </a>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
     </section>
 
-    <!-- Main Services Section -->
-    <section class="services-detailed">
+    <!-- Construction Services -->
+    <section class="service-category-section" id="construction">
         <div class="container">
-            <!-- Construction Services -->
-            <div id="construction" class="service-category">
-                <div class="service-category-header">
-                    <h2>Construction Services</h2>
-                    <p>Building the future with precision and quality craftsmanship</p>
+            <div class="service-category-header">
+                <span class="section-tag">Service Category</span>
+                <h2>Construction Services</h2>
+                <p>Building the future with precision and quality craftsmanship</p>
+            </div>
+            <div class="service-details-grid">
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Building Construction</h3>
+                    <p>Complete construction services for residential, commercial, and industrial buildings with focus on quality and durability.</p>
+                    <ul>
+                        <li>Residential houses and apartments</li>
+                        <li>Commercial buildings and offices</li>
+                        <li>Industrial facilities and warehouses</li>
+                        <li>Institutional buildings (schools, hospitals)</li>
+                    </ul>
                 </div>
-                
-                <!-- Photo space for construction services -->
-                <div class="service-photo-space large"></div>
-                
-                <div class="service-details-grid">
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                            </svg>
-                        </div>
-                        <h3>Building Construction</h3>
-                        <p>Complete construction services for residential, commercial, and industrial buildings with focus on quality and durability.</p>
-                        <ul>
-                            <li>Residential houses and apartments</li>
-                            <li>Commercial buildings and offices</li>
-                            <li>Industrial facilities and warehouses</li>
-                            <li>Institutional buildings (schools, hospitals)</li>
-                        </ul>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 12l7-7 5 5 7.5-7.5"/>
+                            <path d="M16 6l1.5 1.5L22 7"/>
+                            <path d="M2 12l7 6 5-5 7.5 7.5"/>
+                            <path d="M16 18l1.5-1.5L22 17"/>
+                        </svg>
                     </div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M2 12l7-7 5 5 7.5-7.5"></path>
-                                <path d="M16 6l1.5 1.5L22 7"></path>
-                                <path d="M2 12l7 6 5-5 7.5 7.5"></path>
-                                <path d="M16 18l1.5-1.5L22 17"></path>
-                            </svg>
-                        </div>
-                        <h3>Road Works</h3>
-                        <p>Comprehensive road construction and maintenance services for all types of transportation infrastructure.</p>
-                        <ul>
-                            <li>Road construction and rehabilitation</li>
-                            <li>Pavement design and construction</li>
-                            <li>Road drainage systems</li>
-                            <li>Road maintenance and repairs</li>
-                        </ul>
+                    <h3>Road Works</h3>
+                    <p>Comprehensive road construction and maintenance services for all types of transportation infrastructure.</p>
+                    <ul>
+                        <li>Road construction and rehabilitation</li>
+                        <li>Pavement design and construction</li>
+                        <li>Road drainage systems</li>
+                        <li>Road maintenance and repairs</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
                     </div>
-                    
-                    <!-- Photo grid for construction examples -->
-                    <div class="photo-grid">
-                        <div class="photo-grid-item"></div>
-                        <div class="photo-grid-item"></div>
+                    <h3>Steel Structures</h3>
+                    <p>Design, fabrication, and erection of steel structures for various applications.</p>
+                    <ul>
+                        <li>Structural steel fabrication</li>
+                        <li>Steel building construction</li>
+                        <li>Bridge steelwork</li>
+                        <li>Steel reinforcement works</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
                     </div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                        <h3>Steel Structures</h3>
-                        <p>Design, fabrication, and erection of steel structures for various applications.</p>
-                        <ul>
-                            <li>Structural steel fabrication</li>
-                            <li>Steel building construction</li>
-                            <li>Bridge steelwork</li>
-                            <li>Steel reinforcement works</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="9" y1="21" x2="9" y2="9"></line>
-                            </svg>
-                        </div>
-                        <h3>Civil Engineering Works</h3>
-                        <p>Comprehensive civil engineering solutions for infrastructure development.</p>
-                        <ul>
-                            <li>Site preparation and earthworks</li>
-                            <li>Drainage systems</li>
-                            <li>Foundation works</li>
-                            <li>Retaining structures</li>
-                        </ul>
-                    </div>
+                    <h3>Civil Engineering Works</h3>
+                    <p>Comprehensive civil engineering solutions for infrastructure development.</p>
+                    <ul>
+                        <li>Site preparation and earthworks</li>
+                        <li>Drainage systems</li>
+                        <li>Foundation works</li>
+                        <li>Retaining structures</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- Engineering Design Services -->
-            <div id="design" class="service-category">
-                <div class="service-category-header">
-                    <h2>Engineering Design & Planning</h2>
-                    <p>Innovative design solutions for complex engineering challenges</p>
+        </div>
+    </section>
+
+    <!-- Engineering Design -->
+    <section class="service-category-section" id="design">
+        <div class="container">
+            <div class="service-category-header">
+                <span class="section-tag">Service Category</span>
+                <h2>Engineering Design &amp; Planning</h2>
+                <p>Innovative design solutions for complex engineering challenges</p>
+            </div>
+            <div class="service-details-grid">
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h3>Engineering Design</h3>
+                    <p>Comprehensive engineering design services for various infrastructure projects.</p>
+                    <ul>
+                        <li>Structural design and analysis</li>
+                        <li>Architectural design</li>
+                        <li>Mechanical and electrical design</li>
+                        <li>3D modeling and BIM services</li>
+                    </ul>
                 </div>
-                
-                <!-- Photo space for design services -->
-                <div class="service-photo-space medium"></div>
-                
-                <div class="service-details-grid">
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            </svg>
-                        </div>
-                        <h3>Engineering Design</h3>
-                        <p>Comprehensive engineering design services for various infrastructure projects.</p>
-                        <ul>
-                            <li>Structural design and analysis</li>
-                            <li>Architectural design</li>
-                            <li>Mechanical and electrical design</li>
-                            <li>3D modeling and BIM services</li>
-                        </ul>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                        </svg>
                     </div>
-                    
-                    <!-- Photo space for design examples -->
-                    <div class="service-photo-space"></div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="20" x2="12" y2="10"></line>
-                                <line x1="18" y1="20" x2="18" y2="4"></line>
-                                <line x1="6" y1="20" x2="6" y2="16"></line>
-                            </svg>
-                        </div>
-                        <h3>Quantity Estimates</h3>
-                        <p>Accurate quantity surveying and cost estimation services.</p>
-                        <ul>
-                            <li>Bill of Quantities (BOQ) preparation</li>
-                            <li>Cost planning and estimation</li>
-                            <li>Material take-offs</li>
-                            <li>Tender documentation</li>
-                        </ul>
+                    <h3>Quantity Estimates</h3>
+                    <p>Accurate quantity surveying and cost estimation services.</p>
+                    <ul>
+                        <li>Bill of Quantities (BOQ) preparation</li>
+                        <li>Cost planning and estimation</li>
+                        <li>Material take-offs</li>
+                        <li>Tender documentation</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
                     </div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                            </svg>
-                        </div>
-                        <h3>Project Supervision</h3>
-                        <p>Professional project supervision and management services.</p>
-                        <ul>
-                            <li>Construction supervision</li>
-                            <li>Quality control and assurance</li>
-                            <li>Progress monitoring and reporting</li>
-                            <li>Contract administration</li>
-                        </ul>
-                    </div>
+                    <h3>Project Supervision</h3>
+                    <p>Professional project supervision and management services.</p>
+                    <ul>
+                        <li>Construction supervision</li>
+                        <li>Quality control and assurance</li>
+                        <li>Progress monitoring and reporting</li>
+                        <li>Contract administration</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- Specialized Services -->
-            <div id="specialized" class="service-category">
-                <div class="service-category-header">
-                    <h2>Specialized Services</h2>
-                    <p>Expert solutions for specific engineering challenges</p>
+        </div>
+    </section>
+
+    <!-- Specialized Services -->
+    <section class="service-category-section" id="specialized">
+        <div class="container">
+            <div class="service-category-header">
+                <span class="section-tag">Service Category</span>
+                <h2>Specialized Services</h2>
+                <p>Expert solutions for specific engineering challenges</p>
+            </div>
+            <div class="service-details-grid">
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Water Supply &amp; Irrigation</h3>
+                    <p>Comprehensive water infrastructure solutions for various applications.</p>
+                    <ul>
+                        <li>Water supply systems design</li>
+                        <li>Irrigation infrastructure</li>
+                        <li>Borehole drilling and installation</li>
+                        <li>Water treatment systems</li>
+                    </ul>
                 </div>
-                
-                <!-- Photo space for specialized services -->
-                <div class="service-photo-space large"></div>
-                
-                <div class="service-details-grid">
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                            </svg>
-                        </div>
-                        <h3>Water Supply & Irrigation</h3>
-                        <p>Comprehensive water infrastructure solutions for various applications.</p>
-                        <ul>
-                            <li>Water supply systems design</li>
-                            <li>Irrigation infrastructure</li>
-                            <li>Borehole drilling and installation</li>
-                            <li>Water treatment systems</li>
-                        </ul>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="16"/>
+                            <line x1="8" y1="12" x2="16" y2="12"/>
+                        </svg>
                     </div>
-                    
-                    <!-- Photo grid for specialized services examples -->
-                    <div class="photo-grid">
-                        <div class="photo-grid-item"></div>
-                        <div class="photo-grid-item"></div>
+                    <h3>Material Supply &amp; Production</h3>
+                    <p>Quality construction materials supply and production services.</p>
+                    <ul>
+                        <li>Concrete products manufacturing</li>
+                        <li>Construction materials supply</li>
+                        <li>Quality material testing</li>
+                        <li>Custom fabrication services</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                        </svg>
                     </div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="12" y1="8" x2="12" y2="16"></line>
-                                <line x1="8" y1="12" x2="16" y2="12"></line>
-                            </svg>
-                        </div>
-                        <h3>Material Supply & Production</h3>
-                        <p>Quality construction materials supply and production services.</p>
-                        <ul>
-                            <li>Concrete products manufacturing</li>
-                            <li>Construction materials supply</li>
-                            <li>Quality material testing</li>
-                            <li>Custom fabrication services</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                            </svg>
-                        </div>
-                        <h3>Project Management</h3>
-                        <p>Professional project management services for successful project delivery.</p>
-                        <ul>
-                            <li>Project planning and scheduling</li>
-                            <li>Resource management</li>
-                            <li>Risk assessment and mitigation</li>
-                            <li>Stakeholder coordination</li>
-                        </ul>
-                    </div>
+                    <h3>Project Management</h3>
+                    <p>Professional project management services for successful project delivery.</p>
+                    <ul>
+                        <li>Project planning and scheduling</li>
+                        <li>Resource management</li>
+                        <li>Risk assessment and mitigation</li>
+                        <li>Stakeholder coordination</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- Surveying Services -->
-            <div id="surveying" class="service-category">
-                <div class="service-category-header">
-                    <h2>Surveying Services</h2>
-                    <p>Precise measurement and mapping services for engineering projects</p>
+        </div>
+    </section>
+
+    <!-- Structural Engineering -->
+    <section class="service-category-section" id="structural">
+        <div class="container">
+            <div class="service-category-header">
+                <span class="section-tag">Service Category</span>
+                <h2>Structural Engineering</h2>
+                <p>Design and analysis of safe, durable, and efficient structures</p>
+            </div>
+            <div class="service-details-grid">
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                        </svg>
+                    </div>
+                    <h3>Building Design</h3>
+                    <p>Comprehensive structural design for all types of buildings.</p>
+                    <ul>
+                        <li>Residential building design</li>
+                        <li>Commercial structure design</li>
+                        <li>Industrial facility design</li>
+                        <li>Seismic and wind analysis</li>
+                    </ul>
                 </div>
-                
-                <!-- Photo space for surveying services -->
-                <div class="service-photo-space medium"></div>
-                
-                <div class="service-details-grid">
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="3 6 5 6 21 6"></polyline>
-                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                            </svg>
-                        </div>
-                        <h3>Engineering Surveying</h3>
-                        <p>Precise surveying services for engineering projects.</p>
-                        <ul>
-                            <li>Topographic surveys</li>
-                            <li>Control surveys</li>
-                            <li>Construction setting out</li>
-                            <li>Volumetric calculations</li>
-                        </ul>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 12l7-7 5 5 7.5-7.5"/>
+                            <path d="M16 6l1.5 1.5L22 7"/>
+                            <path d="M2 12l7 6 5-5 7.5 7.5"/>
+                            <path d="M16 18l1.5-1.5L22 17"/>
+                        </svg>
                     </div>
-                    
-                    <!-- Photo space for surveying equipment -->
-                    <div class="service-photo-space"></div>
-                    
-                    <div class="service-detail-card">
-                        <div class="service-detail-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="17 8 12 3 7 8"></polyline>
-                                <line x1="12" y1="3" x2="12" y2="15"></line>
-                            </svg>
-                        </div>
-                        <h3>Cadastral Surveying</h3>
-                        <p>Professional land surveying and boundary determination services.</p>
-                        <ul>
-                            <li>Boundary surveys</li>
-                            <li>Land subdivision</li>
-                            <li>Title surveys</li>
-                            <li>Legal boundary determination</li>
-                        </ul>
+                    <h3>Bridge Engineering</h3>
+                    <p>Structural design and analysis of bridges and other crossing structures.</p>
+                    <ul>
+                        <li>Bridge design and analysis</li>
+                        <li>Structural assessment</li>
+                        <li>Bridge rehabilitation</li>
+                        <li>Pedestrian and vehicle bridges</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
                     </div>
+                    <h3>Structural Analysis</h3>
+                    <p>Advanced structural analysis services using state-of-the-art tools and methods.</p>
+                    <ul>
+                        <li>Finite element analysis</li>
+                        <li>Structural optimization</li>
+                        <li>Load and stress analysis</li>
+                        <li>Retrofitting and strengthening</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mechanical Engineering -->
+    <section class="service-category-section" id="mechanical">
+        <div class="container">
+            <div class="service-category-header">
+                <span class="section-tag">Service Category</span>
+                <h2>Mechanical Engineering</h2>
+                <p>Innovative mechanical systems for modern infrastructure</p>
+            </div>
+            <div class="service-details-grid">
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3>HVAC Systems</h3>
+                    <p>Design and installation of heating, ventilation, and air conditioning systems.</p>
+                    <ul>
+                        <li>HVAC system design</li>
+                        <li>Energy-efficient solutions</li>
+                        <li>Ventilation systems</li>
+                        <li>Air conditioning installation</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3>Mechanical Design</h3>
+                    <p>Comprehensive mechanical systems design for buildings and infrastructure.</p>
+                    <ul>
+                        <li>Plumbing systems design</li>
+                        <li>Fire protection systems</li>
+                        <li>Lift and escalator systems</li>
+                        <li>Industrial mechanical systems</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Energy Solutions</h3>
+                    <p>Energy-efficient mechanical solutions for sustainable infrastructure.</p>
+                    <ul>
+                        <li>Energy audits</li>
+                        <li>Renewable energy integration</li>
+                        <li>Energy efficiency consulting</li>
+                        <li>Sustainable mechanical systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electrical Engineering -->
+    <section class="service-category-section" id="electrical">
+        <div class="container">
+            <div class="service-category-header">
+                <span class="section-tag">Service Category</span>
+                <h2>Electrical Engineering</h2>
+                <p>Comprehensive electrical solutions for modern infrastructure</p>
+            </div>
+            <div class="service-details-grid">
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="12 2 12 8 16 8 8 22 8 16 4 16 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Power Distribution</h3>
+                    <p>Design and implementation of reliable power distribution systems.</p>
+                    <ul>
+                        <li>Power system design</li>
+                        <li>Distribution networks</li>
+                        <li>Transformer installations</li>
+                        <li>Emergency power systems</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="2" x2="12" y2="22"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Lighting Design</h3>
+                    <p>Professional lighting design for various applications and environments.</p>
+                    <ul>
+                        <li>Interior lighting design</li>
+                        <li>Exterior and landscape lighting</li>
+                        <li>Emergency lighting systems</li>
+                        <li>Energy-efficient lighting solutions</li>
+                    </ul>
+                </div>
+                <div class="service-detail-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                            <path d="M12 22V12"/>
+                        </svg>
+                    </div>
+                    <h3>Renewable Energy</h3>
+                    <p>Sustainable energy solutions for environmentally conscious infrastructure.</p>
+                    <ul>
+                        <li>Solar power systems</li>
+                        <li>Wind energy integration</li>
+                        <li>Hybrid energy systems</li>
+                        <li>Energy storage solutions</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
-    <section class="projects-preview" style="background-color: #f9f9f9; padding: 5rem 0;">
+    <section class="service-category-section" style="background: var(--off-white);">
         <div class="container">
-            <div class="section-header">
+            <div class="service-category-header">
+                <span class="section-tag">How We Work</span>
                 <h2>Our Process</h2>
                 <p>A systematic approach to delivering exceptional engineering solutions</p>
             </div>
-            
-            <!-- Photo space for process visualization -->
-            <div class="service-photo-space large" style="margin-bottom: 3rem;"></div>
-            
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Consultation & Planning</h3>
-                    <p>We begin by understanding your needs, objectives, and constraints to develop a comprehensive project plan.</p>
+                    <h3>Consultation</h3>
+                    <p>We begin by understanding your needs, objectives, and constraints.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Design & Engineering</h3>
-                    <p>Our expert team creates innovative, efficient designs using the latest tools and technologies.</p>
+                    <h3>Design</h3>
+                    <p>Our experts create innovative, efficient designs using the latest tools.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Implementation</h3>
-                    <p>We execute projects with precision, maintaining the highest standards of quality and safety.</p>
+                    <p>We execute projects with precision, maintaining quality and safety.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Quality Assurance</h3>
-                    <p>Rigorous testing and inspection ensure that all deliverables meet specifications and standards.</p>
+                    <p>Rigorous testing ensures all deliverables meet specifications.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">5</div>
-                    <h3>Project Delivery</h3>
-                    <p>We hand over completed projects with comprehensive documentation and support.</p>
+                    <h3>Delivery</h3>
+                    <p>We hand over completed projects with comprehensive documentation.</p>
                 </div>
             </div>
         </div>
@@ -733,14 +700,30 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Engineer Your Vision?</h2>
-                <p>Let's collaborate to bring your project to life with innovative engineering solutions and exceptional service.</p>
-                <a href="contact.html" class="cta-button magnetic">
-                    <span>Get in touch</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
+                <div class="cta-text">
+                    <span class="section-tag light">Let's Build Together</span>
+                    <h2>Ready to Engineer<br />Your Vision?</h2>
+                    <p>Let's collaborate to bring your project to life with innovative engineering solutions and exceptional service.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="cta-button magnetic glow-effect">
+                            <span>Get in touch</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+256755449196" class="cta-phone">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>+256 755 449 196</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-visual">
+                    <div class="cta-shape cta-shape-1"></div>
+                    <div class="cta-shape cta-shape-2"></div>
+                    <div class="cta-shape cta-shape-3"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -749,44 +732,27 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>STEYA<span>ENGINEERING</span></h3>
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.jpg" alt="STEYA ENGINEERING" class="footer-logo-img" />
+                        <span>STEYA<span>ENGINEERING</span></span>
+                    </a>
                     <p>Delivering precision engineering solutions with innovation, expertise, and commitment to excellence since 2022.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 8a6 6 极 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7极-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap极="round" stroke-linejoin="round"/>
-                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0极 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                        <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4>Company</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                       <li><a href="services.html">Services</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Insights</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -795,20 +761,31 @@
                         <li><a href="services.html#construction">Construction</a></li>
                         <li><a href="services.html#design">Engineering Design</a></li>
                         <li><a href="services.html#specialized">Specialized Services</a></li>
-                        <li><a href="services.html#surveying">Surveying</a></li>
-                        <li><a href="services.html">View All Services</a></li>
+                        <li><a href="services.html#structural">Structural</a></li>
+                        <li><a href="services.html#mechanical">Mechanical</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <p>Kawempe<br>Kampala<br>Uganda</p>
-                    <p>Phone: +256 755 449 196<br>Email: steyaconstruction@gmail.com</p>
-                    <p>Registered with URA, KCCA, URSB, NSSF</p>
-                    <a href="contact.html" class="outline-button">Get Directions</a>
+                    <h4>Contact</h4>
+                    <address>
+                        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kawempe, Kampala, Uganda</p>
+                        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:+256755449196">+256 755 449 196</a></p>
+                        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <a href="mailto:steyaconstruction@gmail.com">steyaconstruction@gmail.com</a></p>
+                    </address>
+                    <div class="accreditation-badges">
+                        <span>URA</span>
+                        <span>KCCA</span>
+                        <span>URSB</span>
+                        <span>NSSF</span>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2022 STEYA ENGINEERING LTD. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -816,4 +793,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
